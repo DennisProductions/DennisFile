@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% block body %}
+
+<div class="container mt-5">
+    <div class="alert alert-warning text-danger">
+       <h2>{{ obj.data_.date() }}</h2>
+        <h4>{{ obj.title }}</h4>
+        <p>{{ obj.intro }}</p>
+        <p>{{ obj.main_text }}</p>
+        <a href="/notebooks/{{obj.id-1}}" class="btn btn-success">Go back</a>
+        <a href="/notebooks/{{obj.id+1}}" class="btn btn-primary">Forward</a>
+        <a href="/notebooks/{{obj.id}}/delete" class="btn btn-danger">Delete</a>
+        <a href="/notebooks/{{obj.id}}/add" class="btn btn-success">Back to all articles</a>
+    </div>
+</div>
+
+{% endblock %}

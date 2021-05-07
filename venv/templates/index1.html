@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+{% for el in notes %}
+<div class="container mt-5">
+    <div class="alert alert-warning text-danger">
+       <h2>{{ el.data_.date() }}</h2>
+        <h4>{{ el.title }}</h4>
+        <p>{{ el.intro }}</p>
+        <a href="/notebooks/{{el.id}}" class="btn btn-success">Info</a>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+{% block body %}
+
+<div class="container ">
+<table class="table-hover" >
+
+<h3>Це сторіка для адрес</h3>
+    <theader>
+        <tr>
+            <th>Ім*я</th>
+            <th>Електронна пошта</th>
+            <th>Номер телефону</th>
+        </tr>
+    </theader>
+
+
+{% for x in dnames %}
+    <tr>
+        {% for z in x.values() %}
+        <td>{{ z }}</td>
+        {% endfor %}
+    </tr>
+
+    {% endfor %}
+</table>
+</div>
+{% endblock %}
